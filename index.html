@@ -1,0 +1,581 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>KOI Ngọc Bài — Trại cá Koi Nhật Bản</title>
+<meta name="description" content="KOI Ngọc Bài — trại cá Koi Nhật Bản nhập khẩu trực tiếp, tuyển chọn và dưỡng khoẻ tại Việt Nam." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐟</text></svg>" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<!-- ============================================================
+     ⚙️  CẤU HÌNH NHANH — SITE CONFIG
+     Muốn đổi tên dự án, ảnh, thông tin liên hệ, danh sách cá...
+     chỉ cần sửa object CONFIG bên dưới. Không cần đụng vào HTML/CSS.
+     ============================================================ -->
+<script>
+  window.CONFIG = {
+    site: {
+      name: "KOI Ngọc Bài",
+      shortName: "NGỌC BÀI",
+      tagline: "Nơi những viên ngọc bơi dưới nước",
+      logoInitial: "K", // chữ cái hiển thị trong logo tròn
+    },
+
+    nav: [
+      { label: "Trang chủ", href: "#top" },
+      { label: "Cá Koi", href: "#fish" },
+      { label: "Giống cá", href: "#varieties" },
+      { label: "Về chúng tôi", href: "#about" },
+      { label: "Liên hệ", href: "#contact" },
+    ],
+
+    hero: {
+      eyebrow: "Trại cá Koi Nhật Bản · nhập khẩu trực tiếp",
+      headline: "Ngọc Bài — nơi những viên ngọc bơi dưới nước",
+      sub: "Mỗi chú cá Koi tại Ngọc Bài đều được tuyển chọn tận trại Nhật, cách ly và dưỡng khoẻ trước khi về tay người yêu cá. Ngọc quý phải được chăm bằng cả sự kiên nhẫn.",
+      ctaPrimary: { label: "Xem cá Koi", href: "#fish" },
+      ctaSecondary: { label: "Liên hệ tư vấn", href: "#contact" },
+      // Ảnh nền hero — thay bằng ảnh trại cá thật của bạn
+      image: "https://picsum.photos/seed/koipond-hero/1800/1100",
+    },
+
+    stats: [
+      { value: "12+", label: "năm dưỡng cá & nhập khẩu" },
+      { value: "3.400+", label: "cá Koi đã bàn giao" },
+      { value: "98%", label: "cá khoẻ mạnh sau bàn giao" },
+      { value: "7", label: "trại giống hợp tác tại Nhật" },
+    ],
+
+    about: {
+      eyebrow: "Về Ngọc Bài",
+      title: "Chọn cá như chọn ngọc — bằng con mắt và sự kiên nhẫn",
+      body: "Ngọc Bài tuyển chọn cá Koi trực tiếp từ các trại giống uy tín tại Niigata, Nhật Bản. Trước khi về Việt Nam, mỗi cá thể đều trải qua quy trình cách ly, kiểm tra sức khoẻ và dưỡng nước riêng — để khi đến tay người chơi, cá không chỉ đẹp mà còn khoẻ, lên màu chuẩn theo thời gian.",
+      image: "https://picsum.photos/seed/koicare-about/900/1100",
+    },
+
+    // ---------------- DANH SÁCH CÁ KOI ----------------
+    // Thêm / bớt / sửa từng cá tại đây. "badge" là nhãn nhỏ góc ảnh (vd: Mới, Hết, VIP)
+    fish: [
+      { name: "Kohaku 158", variant: "Kohaku", size: "69cm", age: "3 tuổi", farm: "Momotaro Koi Farm", price: "Liên hệ", badge: "Mới", image: "https://picsum.photos/seed/kohaku158/700/700" },
+      { name: "Sanke 163", variant: "Taisho Sanke", size: "72cm", age: "3 tuổi", farm: "Ogata Koi Farm", price: "Liên hệ", badge: "VIP", image: "https://picsum.photos/seed/sanke163/700/700" },
+      { name: "Showa 160", variant: "Tancho Showa", size: "71cm", age: "4 tuổi", farm: "Ogata Koi Farm", price: "Liên hệ", badge: "Hiếm", image: "https://picsum.photos/seed/showa160/700/700" },
+      { name: "Shiro Utsuri 164", variant: "Shiro Utsuri", size: "63cm", age: "2 tuổi", farm: "Ogata Koi Farm", price: "Liên hệ", badge: "Mới", image: "https://picsum.photos/seed/shiroutsuri164/700/700" },
+      { name: "Asagi 168", variant: "Asagi", size: "69cm", age: "3 tuổi", farm: "Ogata Koi Farm", price: "Liên hệ", badge: "", image: "https://picsum.photos/seed/asagi168/700/700" },
+      { name: "Shusui 166", variant: "Shusui", size: "61cm", age: "2 tuổi", farm: "Ogata Koi Farm", price: "Liên hệ", badge: "", image: "https://picsum.photos/seed/shusui166/700/700" },
+    ],
+
+    // ---------------- GIỐNG CÁ TIÊU BIỂU ----------------
+    varieties: [
+      { name: "Kohaku", image: "https://picsum.photos/seed/v-kohaku/300/300" },
+      { name: "Sanke", image: "https://picsum.photos/seed/v-sanke/300/300" },
+      { name: "Showa", image: "https://picsum.photos/seed/v-showa/300/300" },
+      { name: "Asagi", image: "https://picsum.photos/seed/v-asagi/300/300" },
+      { name: "Shusui", image: "https://picsum.photos/seed/v-shusui/300/300" },
+      { name: "Goshiki", image: "https://picsum.photos/seed/v-goshiki/300/300" },
+      { name: "Chagoi", image: "https://picsum.photos/seed/v-chagoi/300/300" },
+      { name: "Ochiba", image: "https://picsum.photos/seed/v-ochiba/300/300" },
+    ],
+
+    whyUs: [
+      { title: "Nhập khẩu trực tiếp", body: "100% cá Koi Nhật Bản, có nguồn gốc rõ ràng từ trại giống hợp tác." },
+      { title: "Dưỡng khoẻ trước bàn giao", body: "Cách ly, kiểm dịch và dưỡng nước theo quy trình riêng của Ngọc Bài." },
+      { title: "Tư vấn tận tâm", body: "Hỗ trợ chọn cá theo hồ, theo phong thuỷ và theo ngân sách 24/7." },
+    ],
+
+    contact: {
+      eyebrow: "Liên hệ",
+      title: "Tìm cá theo nhu cầu của bạn",
+      body: "Để lại thông tin — Ngọc Bài sẽ tư vấn dòng cá, kích thước và mức giá phù hợp với hồ và mong muốn của bạn.",
+      phone: "0937 598 098",
+      zalo: "0937 598 098",
+      address: "Số 11 Phố Gia Thượng, Bồ Đề, TP. Hà Nội",
+      addressFarm: "Trại dưỡng cá: Xã Vĩnh Thanh, Đông Anh, TP. Hà Nội",
+      email: "hello@koingocbai.vn",
+      social: [
+        { label: "Facebook", href: "#" },
+        { label: "TikTok", href: "#" },
+        { label: "YouTube", href: "#" },
+        { label: "Zalo", href: "#" },
+      ],
+    },
+
+    footer: {
+      note: "Copyright © " + new Date().getFullYear() + " KOI Ngọc Bài. All rights reserved.",
+    },
+  };
+</script>
+<!-- ============================================================
+     Hết phần cấu hình. Bên dưới là style + logic hiển thị.
+     ============================================================ -->
+
+<style>
+  :root{
+    --bg: #0d211d;
+    --bg-soft: #123028;
+    --panel: #16342c;
+    --panel-line: rgba(244,239,225,0.14);
+    --ink: #f4efe1;
+    --ink-dim: rgba(244,239,225,0.66);
+    --ink-faint: rgba(244,239,225,0.4);
+    --koi-orange: #e2572b;
+    --koi-orange-soft: rgba(226,87,43,0.16);
+    --koi-gold: #c9a24b;
+    --radius: 6px;
+    --wrap: 1180px;
+    --display: 'Fraunces', serif;
+    --body: 'Be Vietnam Pro', sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+  }
+
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+  body{
+    margin:0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--body);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  img{ max-width:100%; display:block; }
+  a{ color: inherit; text-decoration:none; }
+  .wrap{ max-width: var(--wrap); margin: 0 auto; padding: 0 28px; }
+  section{ position: relative; }
+  .eyebrow{
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--koi-gold);
+    display:flex; align-items:center; gap:10px;
+    margin: 0 0 16px;
+  }
+  .eyebrow::before{
+    content:""; width:22px; height:1px; background: var(--koi-gold);
+  }
+  h1,h2,h3{ font-family: var(--display); font-weight: 600; margin: 0; }
+  .btn{
+    display:inline-flex; align-items:center; gap:10px;
+    font-family: var(--body); font-weight:600; font-size: 15px;
+    padding: 14px 26px; border-radius: 999px; border: 1px solid transparent;
+    cursor:pointer; transition: transform .25s ease, background .25s ease, border-color .25s ease;
+  }
+  .btn:hover{ transform: translateY(-2px); }
+  .btn-primary{ background: var(--koi-orange); color: #17140f; }
+  .btn-primary:hover{ background:#ee6238; }
+  .btn-ghost{ border-color: rgba(244,239,225,0.35); color: var(--ink); }
+  .btn-ghost:hover{ border-color: var(--ink); }
+
+  /* ---------- reveal on scroll ---------- */
+  .reveal{ opacity:0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.in{ opacity:1; transform:none; }
+  @media (prefers-reduced-motion: reduce){
+    .reveal{ opacity:1; transform:none; transition:none; }
+    html{ scroll-behavior:auto; }
+  }
+
+  /* ---------- stamp seal (signature element) ---------- */
+  .seal{
+    width: 96px; height: 96px; position:relative; flex-shrink:0;
+    animation: spin 22s linear infinite;
+  }
+  @media (prefers-reduced-motion: reduce){ .seal{ animation:none; } }
+  @keyframes spin{ to{ transform: rotate(360deg); } }
+  .seal svg{ width:100%; height:100%; }
+  .seal-center{
+    position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
+    font-family: var(--display); font-style: italic; font-size: 26px; color: var(--koi-gold);
+  }
+
+  /* ---------- header ---------- */
+  header{
+    position: fixed; top:0; left:0; right:0; z-index: 50;
+    background: linear-gradient(to bottom, rgba(13,33,29,0.92), rgba(13,33,29,0));
+    padding: 18px 0;
+  }
+  .nav-row{ display:flex; align-items:center; justify-content:space-between; gap: 20px; }
+  .logo{ display:flex; align-items:center; gap:12px; font-family: var(--display); }
+  .logo-mark{
+    width:38px; height:38px; border-radius:50%; border:1px solid var(--koi-gold);
+    display:flex; align-items:center; justify-content:center;
+    font-size: 16px; color: var(--koi-gold);
+  }
+  .logo-text{ font-size: 18px; letter-spacing: 0.02em; }
+  .logo-text small{ display:block; font-family: var(--mono); font-size:9px; letter-spacing:.18em; color: var(--ink-faint); text-transform:uppercase; margin-top:2px; }
+  nav ul{ list-style:none; display:flex; gap: 30px; margin:0; padding:0; }
+  nav ul li a{ font-size: 14px; color: var(--ink-dim); transition: color .2s ease; }
+  nav ul li a:hover{ color: var(--koi-orange); }
+  .nav-actions{ display:flex; align-items:center; gap:16px; }
+  .nav-phone{ font-family: var(--mono); font-size: 13px; color: var(--ink-dim); display:flex; align-items:center; gap:8px; }
+  .menu-toggle{ display:none; background:none; border:none; color:var(--ink); font-size:26px; cursor:pointer; }
+
+  /* ---------- hero ---------- */
+  .hero{
+    min-height: 100svh; display:flex; align-items:flex-end;
+    padding-top: 120px; padding-bottom: 90px;
+    background: linear-gradient(180deg, rgba(13,33,29,.35) 0%, rgba(13,33,29,.55) 45%, rgba(13,33,29,.96) 100%),
+                var(--hero-image) center/cover no-repeat;
+  }
+  .hero-inner{ max-width: 720px; }
+  .hero h1{ font-size: clamp(38px, 6vw, 68px); line-height: 1.06; letter-spacing:-0.01em; }
+  .hero p{ margin: 22px 0 34px; font-size: 17px; color: var(--ink-dim); max-width: 560px; }
+  .hero-ctas{ display:flex; gap: 16px; flex-wrap: wrap; }
+  .hero-ripple{ position:absolute; left:0; right:0; bottom:-1px; }
+
+  /* ---------- stats strip ---------- */
+  .stats{ background: var(--bg-soft); border-top:1px solid var(--panel-line); border-bottom:1px solid var(--panel-line); }
+  .stats-grid{ display:grid; grid-template-columns: repeat(4,1fr); padding: 40px 0; }
+  .stat{ text-align:center; border-left: 1px solid var(--panel-line); padding: 0 14px; }
+  .stat:first-child{ border-left:none; }
+  .stat-value{ font-family: var(--display); font-size: 34px; color: var(--koi-gold); }
+  .stat-label{ font-size: 12.5px; color: var(--ink-dim); margin-top: 6px; }
+
+  /* ---------- about ---------- */
+  .about{ padding: 120px 0; }
+  .about-grid{ display:grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items:center; }
+  .about-media{ position:relative; }
+  .about-media img{ border-radius: var(--radius); width:100%; aspect-ratio: 4/5; object-fit:cover; }
+  .about-media::after{
+    content:""; position:absolute; inset: 18px -18px -18px 18px; border: 1px solid var(--koi-gold); border-radius: var(--radius); z-index:-1;
+  }
+  .about h2{ font-size: clamp(28px, 3.2vw, 40px); margin-bottom: 22px; line-height:1.15; }
+  .about-body{ color: var(--ink-dim); font-size: 16px; margin-bottom: 30px; }
+  .why-list{ list-style:none; margin:0; padding:0; display:grid; gap: 20px; }
+  .why-list li{ display:flex; gap: 16px; align-items:flex-start; }
+  .why-num{ font-family: var(--mono); font-size: 12px; color: var(--koi-orange); border:1px solid var(--koi-orange); border-radius:50%; width:26px; height:26px; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:2px; }
+  .why-title{ font-weight:600; margin-bottom: 4px; }
+  .why-body{ color: var(--ink-dim); font-size: 14px; }
+
+  /* ---------- section heading generic ---------- */
+  .section-head{ display:flex; justify-content:space-between; align-items:flex-end; gap: 30px; margin-bottom: 50px; flex-wrap:wrap; }
+  .section-head h2{ font-size: clamp(28px,3.2vw,40px); max-width: 560px; line-height:1.15; }
+  .section-head p{ color: var(--ink-dim); max-width: 360px; font-size:14.5px; }
+
+  /* ---------- fish grid (pedigree cards) ---------- */
+  .fish{ padding: 40px 0 120px; }
+  .fish-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
+  .fish-card{
+    background: var(--panel); border:1px solid var(--panel-line); border-radius: var(--radius);
+    overflow:hidden; position:relative; transition: transform .3s ease, border-color .3s ease;
+  }
+  .fish-card:hover{ transform: translateY(-6px); border-color: var(--koi-gold); }
+  .fish-media{ position:relative; aspect-ratio: 1/1; overflow:hidden; }
+  .fish-media img{ width:100%; height:100%; object-fit:cover; transition: transform .5s ease; }
+  .fish-card:hover .fish-media img{ transform: scale(1.06); }
+  .fish-badge{
+    position:absolute; top:14px; left:14px; background: var(--koi-orange); color:#17140f;
+    font-family: var(--mono); font-size: 10.5px; letter-spacing:.08em; text-transform:uppercase;
+    padding: 5px 10px; border-radius: 999px; font-weight:600;
+  }
+  .fish-body{ padding: 22px 22px 24px; border-top: 1px dashed var(--panel-line); }
+  .fish-name-row{ display:flex; justify-content:space-between; align-items:baseline; margin-bottom: 4px; }
+  .fish-name{ font-family: var(--display); font-size: 20px; }
+  .fish-variant{ font-family: var(--mono); font-size: 11px; color: var(--koi-gold); text-transform:uppercase; letter-spacing:.06em; margin-bottom: 16px; }
+  .fish-specs{ display:grid; grid-template-columns: repeat(3,1fr); gap: 10px; margin-bottom: 18px; }
+  .fish-spec{ font-family: var(--mono); font-size: 11px; color: var(--ink-dim); }
+  .fish-spec b{ display:block; color: var(--ink); font-size: 13px; font-family: var(--body); font-weight:600; margin-top:2px; }
+  .fish-foot{ display:flex; justify-content:space-between; align-items:center; padding-top: 14px; border-top: 1px solid var(--panel-line); }
+  .fish-price{ font-family: var(--mono); font-size: 13px; color: var(--ink-dim); }
+  .fish-cta{ font-size: 13px; font-weight:600; color: var(--koi-orange); display:flex; align-items:center; gap:6px; }
+  .fish-cta::after{ content:"→"; transition: transform .2s ease; }
+  .fish-card:hover .fish-cta::after{ transform: translateX(4px); }
+
+  /* ---------- varieties ---------- */
+  .varieties{ padding: 40px 0 130px; background: var(--bg-soft); border-top:1px solid var(--panel-line); border-bottom: 1px solid var(--panel-line); padding-top:100px; }
+  .variety-row{ display:flex; gap: 30px; overflow-x:auto; padding-bottom: 10px; scrollbar-width:none; }
+  .variety-row::-webkit-scrollbar{ display:none; }
+  .variety-item{ flex: 0 0 auto; text-align:center; width: 128px; }
+  .variety-photo{ width:112px; height:112px; border-radius:50%; overflow:hidden; border: 1px solid var(--panel-line); margin: 0 auto 14px; }
+  .variety-photo img{ width:100%; height:100%; object-fit:cover; }
+  .variety-name{ font-size: 13.5px; color: var(--ink-dim); }
+
+  /* ---------- contact ---------- */
+  .contact{ padding: 130px 0; }
+  .contact-grid{ display:grid; grid-template-columns: 1fr 1fr; gap: 70px; }
+  .contact h2{ font-size: clamp(28px,3.2vw,40px); margin-bottom: 18px; line-height:1.15; }
+  .contact-body{ color: var(--ink-dim); margin-bottom: 36px; max-width: 420px; }
+  .contact-info{ display:grid; gap: 22px; }
+  .contact-info-item{ display:flex; gap:16px; align-items:flex-start; }
+  .contact-info-label{ font-family: var(--mono); font-size: 11px; color: var(--koi-gold); text-transform:uppercase; letter-spacing:.08em; width: 90px; flex-shrink:0; padding-top:2px; }
+  .contact-info-value{ font-size: 15px; }
+  .form{ background: var(--panel); border:1px solid var(--panel-line); border-radius: var(--radius); padding: 34px; }
+  .form-row{ margin-bottom: 18px; }
+  .form-row label{ display:block; font-family: var(--mono); font-size: 11px; text-transform:uppercase; letter-spacing:.06em; color: var(--ink-dim); margin-bottom: 8px; }
+  .form-row input, .form-row textarea{
+    width:100%; background: var(--bg-soft); border:1px solid var(--panel-line); border-radius: 4px;
+    padding: 12px 14px; color: var(--ink); font-family: var(--body); font-size: 14px;
+  }
+  .form-row input:focus, .form-row textarea:focus{ outline: 2px solid var(--koi-orange); outline-offset: 1px; }
+  .form-row textarea{ resize: vertical; min-height: 90px; }
+  .form .btn{ width:100%; justify-content:center; margin-top: 6px; }
+
+  /* ---------- footer ---------- */
+  footer{ border-top: 1px solid var(--panel-line); padding: 50px 0 34px; }
+  .footer-row{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap: 24px; }
+  .footer-social{ display:flex; gap: 20px; list-style:none; margin:0; padding:0; }
+  .footer-social a{ font-size: 13px; color: var(--ink-dim); }
+  .footer-social a:hover{ color: var(--koi-orange); }
+  .footer-note{ font-size: 12.5px; color: var(--ink-faint); margin-top: 26px; }
+
+  /* ---------- responsive ---------- */
+  @media (max-width: 980px){
+    nav{ display:none; }
+    .nav-phone{ display:none; }
+    .menu-toggle{ display:block; }
+    .stats-grid{ grid-template-columns: repeat(2,1fr); row-gap: 24px; }
+    .stat:nth-child(3){ border-left:none; }
+    .about-grid, .contact-grid{ grid-template-columns: 1fr; gap: 46px; }
+    .about-media{ order:2; }
+    .fish-grid{ grid-template-columns: repeat(2,1fr); }
+  }
+  @media (max-width: 760px){
+    .seal{ display:none; }
+  }
+  @media (max-width: 600px){
+    .wrap{ padding: 0 20px; }
+    .fish-grid{ grid-template-columns: 1fr; }
+    .hero{ padding-top:110px; }
+    .seal{ width:70px; height:70px; }
+    .seal-center{ font-size:20px; }
+    .section-head{ margin-bottom:34px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav-row">
+    <a href="#top" class="logo">
+      <span class="logo-mark" id="logoMark">K</span>
+      <span class="logo-text" id="logoText">KOI Ngọc Bài<small id="logoSub">TRẠI CÁ KOI NHẬT BẢN</small></span>
+    </a>
+    <nav><ul id="navList"></ul></nav>
+    <div class="nav-actions">
+      <span class="nav-phone" id="navPhone"></span>
+      <a class="btn btn-primary" href="#contact" style="padding:10px 20px; font-size:13px;">Liên hệ tư vấn</a>
+      <button class="menu-toggle" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="wrap" style="display:flex; justify-content:space-between; align-items:flex-end; gap:40px;">
+  <div class="hero-inner reveal">
+    <p class="eyebrow" id="heroEyebrow"></p>
+    <h1 id="heroHeadline"></h1>
+    <p id="heroSub"></p>
+    <div class="hero-ctas">
+      <a class="btn btn-primary" id="heroCtaPrimary" href="#fish"></a>
+      <a class="btn btn-ghost" id="heroCtaSecondary" href="#contact"></a>
+    </div>
+  </div>
+  <div class="seal" id="heroSeal" aria-hidden="true">
+    <svg viewBox="0 0 100 100">
+      <defs><path id="sealCircle" d="M 50,50 m -38,0 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0" /></defs>
+      <circle cx="50" cy="50" r="46" fill="none" stroke="#c9a24b" stroke-width="1"/>
+      <circle cx="50" cy="50" r="38" fill="none" stroke="#c9a24b" stroke-width="1"/>
+      <text font-family="JetBrains Mono, monospace" font-size="6.4" letter-spacing="2" fill="#c9a24b">
+        <textPath href="#sealCircle" startOffset="0%">• KOI NGỌC BÀI • TRẠI CÁ NHẬT BẢN </textPath>
+      </text>
+    </svg>
+    <span class="seal-center" id="sealCenter">K</span>
+  </div>
+  </div>
+</section>
+
+<svg viewBox="0 0 1200 24" preserveAspectRatio="none" style="display:block; width:100%; height:16px; background:var(--bg-soft);" aria-hidden="true">
+  <path d="M0,12 C150,24 300,0 450,12 C600,24 750,0 900,12 C1050,24 1150,4 1200,12 L1200,24 L0,24 Z" fill="var(--bg)"/>
+</svg>
+<section class="stats">
+  <div class="wrap stats-grid" id="statsGrid"></div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-media reveal">
+      <img id="aboutImage" src="" alt="Trại cá Koi" />
+    </div>
+    <div class="reveal">
+      <p class="eyebrow" id="aboutEyebrow"></p>
+      <h2 id="aboutTitle"></h2>
+      <p class="about-body" id="aboutBody"></p>
+      <ul class="why-list" id="whyList"></ul>
+    </div>
+  </div>
+</section>
+
+<section class="fish" id="fish">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2>Mở bán cá Koi chất lượng</h2>
+      <p>Mỗi cá thể đều đi kèm thông tin trại giống, kích thước và độ tuổi rõ ràng — như một tấm phả hệ.</p>
+    </div>
+    <div class="fish-grid" id="fishGrid"></div>
+  </div>
+</section>
+
+<section class="varieties" id="varieties">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2>Các biến thể tiêu biểu</h2>
+      <p>Từ Kohaku cổ điển đến Goshiki nhiều lớp vảy — Ngọc Bài có đủ dòng cá cho mọi gu chơi.</p>
+    </div>
+    <div class="variety-row" id="varietyRow"></div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap contact-grid">
+    <div class="reveal">
+      <p class="eyebrow" id="contactEyebrow"></p>
+      <h2 id="contactTitle"></h2>
+      <p class="contact-body" id="contactBody"></p>
+      <div class="contact-info" id="contactInfo"></div>
+    </div>
+    <form class="form reveal" id="contactForm">
+      <div class="form-row"><label for="f-name">Họ và tên</label><input id="f-name" type="text" placeholder="Nguyễn Văn A" required /></div>
+      <div class="form-row"><label for="f-phone">Số điện thoại</label><input id="f-phone" type="tel" placeholder="09xx xxx xxx" required /></div>
+      <div class="form-row"><label for="f-msg">Nhu cầu của bạn</label><textarea id="f-msg" placeholder="Dòng cá quan tâm, kích thước, ngân sách..."></textarea></div>
+      <button type="submit" class="btn btn-primary">Gửi yêu cầu tư vấn</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-row">
+      <a href="#top" class="logo">
+        <span class="logo-mark">K</span>
+        <span class="logo-text" id="footerLogoText"></span>
+      </a>
+      <ul class="footer-social" id="footerSocial"></ul>
+    </div>
+    <p class="footer-note" id="footerNote"></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const C = window.CONFIG;
+
+  // ---- helpers ----
+  const $ = (id) => document.getElementById(id);
+  const el = (tag, cls, html) => { const e = document.createElement(tag); if(cls) e.className = cls; if(html!==undefined) e.innerHTML = html; return e; };
+
+  // ---- header / logo ----
+  $('logoMark').textContent = C.site.logoInitial;
+  $('logoText').childNodes[0].textContent = C.site.name;
+  $('logoSub').textContent = 'TRẠI CÁ KOI NHẬT BẢN';
+  $('footerLogoText').textContent = C.site.name;
+  document.title = C.site.name + ' — Trại cá Koi Nhật Bản';
+  $('navPhone').textContent = '☎ ' + C.contact.phone;
+  $('sealCenter').textContent = C.site.logoInitial;
+
+  C.nav.forEach(item => {
+    const li = el('li', null, `<a href="${item.href}">${item.label}</a>`);
+    $('navList').appendChild(li);
+  });
+
+  // ---- hero ----
+  document.querySelector('.hero').style.setProperty('--hero-image', `url(${C.hero.image})`);
+  $('heroEyebrow').textContent = C.hero.eyebrow;
+  $('heroHeadline').textContent = C.hero.headline;
+  $('heroSub').textContent = C.hero.sub;
+  $('heroCtaPrimary').textContent = C.hero.ctaPrimary.label;
+  $('heroCtaPrimary').href = C.hero.ctaPrimary.href;
+  $('heroCtaSecondary').textContent = C.hero.ctaSecondary.label;
+  $('heroCtaSecondary').href = C.hero.ctaSecondary.href;
+
+  // ---- stats ----
+  C.stats.forEach(s => {
+    $('statsGrid').appendChild(el('div','stat',
+      `<div class="stat-value">${s.value}</div><div class="stat-label">${s.label}</div>`));
+  });
+
+  // ---- about ----
+  $('aboutImage').src = C.about.image;
+  $('aboutImage').alt = C.about.title;
+  $('aboutEyebrow').textContent = C.about.eyebrow;
+  $('aboutTitle').textContent = C.about.title;
+  $('aboutBody').textContent = C.about.body;
+  C.whyUs.forEach((w,i) => {
+    $('whyList').appendChild(el('li', null,
+      `<span class="why-num">${String(i+1).padStart(2,'0')}</span>
+       <span><span class="why-title">${w.title}</span><br><span class="why-body">${w.body}</span></span>`));
+  });
+
+  // ---- fish grid ----
+  C.fish.forEach(f => {
+    const card = el('div','fish-card',`
+      <div class="fish-media">
+        <img src="${f.image}" alt="${f.name}" loading="lazy" />
+        ${f.badge ? `<span class="fish-badge">${f.badge}</span>` : ''}
+      </div>
+      <div class="fish-body">
+        <div class="fish-name-row"><span class="fish-name">${f.name}</span></div>
+        <div class="fish-variant">${f.variant}</div>
+        <div class="fish-specs">
+          <div class="fish-spec">Size<b>${f.size}</b></div>
+          <div class="fish-spec">Tuổi<b>${f.age}</b></div>
+          <div class="fish-spec">Trại<b>${f.farm}</b></div>
+        </div>
+        <div class="fish-foot">
+          <span class="fish-price">${f.price}</span>
+          <a class="fish-cta" href="#contact">Yêu cầu báo giá</a>
+        </div>
+      </div>
+    `);
+    $('fishGrid').appendChild(card);
+  });
+
+  // ---- varieties ----
+  C.varieties.forEach(v => {
+    $('varietyRow').appendChild(el('div','variety-item',
+      `<div class="variety-photo"><img src="${v.image}" alt="${v.name}" loading="lazy" /></div>
+       <div class="variety-name">${v.name}</div>`));
+  });
+
+  // ---- contact ----
+  $('contactEyebrow').textContent = C.contact.eyebrow;
+  $('contactTitle').textContent = C.contact.title;
+  $('contactBody').textContent = C.contact.body;
+  const info = [
+    ['Hotline', C.contact.phone],
+    ['Zalo', C.contact.zalo],
+    ['Địa chỉ', C.contact.address],
+    ['Trại dưỡng', C.contact.addressFarm],
+    ['Email', C.contact.email],
+  ];
+  info.forEach(([label,value]) => {
+    $('contactInfo').appendChild(el('div','contact-info-item',
+      `<span class="contact-info-label">${label}</span><span class="contact-info-value">${value}</span>`));
+  });
+  C.contact.social.forEach(s => {
+    $('footerSocial').appendChild(el('li', null, `<a href="${s.href}">${s.label}</a>`));
+  });
+  $('footerNote').textContent = C.footer.note;
+
+  $('contactForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const name = $('f-name').value.trim();
+    alert('Cảm ơn ' + (name || 'bạn') + '! Ngọc Bài đã nhận được yêu cầu và sẽ liên hệ sớm nhất.\n\n(Đây là form demo — kết nối email/CRM thật trong script.js hoặc thay bằng Formspree/Getform.)');
+    this.reset();
+  });
+
+  // ---- scroll reveal ----
+  const revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('in'); io.unobserve(entry.target); } });
+    }, { threshold: 0.15 });
+    revealEls.forEach(elx => io.observe(elx));
+  } else {
+    revealEls.forEach(elx => elx.classList.add('in'));
+  }
+})();
+</script>
+</body>
+</html>
